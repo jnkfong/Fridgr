@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fridgr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Si-Fb-No3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6v-EV-GGu">
+                                <rect key="frame" x="162" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MMa-Mr-YSk"/>
+                                    <constraint firstAttribute="width" secondItem="z6v-EV-GGu" secondAttribute="height" multiplier="1:1" id="jdE-74-iJo"/>
+                                    <constraint firstAttribute="width" constant="50" id="z5D-Rf-VBx"/>
+                                </constraints>
+                                <state key="normal" image="add-btn"/>
+                                <connections>
+                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tg6-T1-mcH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No Item Detected" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNT-U5-FEE">
+                                <rect key="frame" x="16" y="552" width="343" height="30"/>
+                                <color key="textColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Si-Fb-No3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8sA-dS-bLL"/>
+                            <constraint firstItem="z6v-EV-GGu" firstAttribute="centerX" secondItem="1Si-Fb-No3" secondAttribute="centerX" id="BqF-Y5-2e9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VNT-U5-FEE" secondAttribute="trailing" constant="16" id="Emt-B6-DQM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z6v-EV-GGu" secondAttribute="bottom" constant="20" id="JgW-O2-H05"/>
+                            <constraint firstItem="1Si-Fb-No3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MAC-pQ-5I5"/>
+                            <constraint firstItem="1Si-Fb-No3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RNg-Dl-ouA"/>
+                            <constraint firstItem="VNT-U5-FEE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TjF-yT-XWU"/>
+                            <constraint firstItem="z6v-EV-GGu" firstAttribute="top" secondItem="VNT-U5-FEE" secondAttribute="bottom" constant="15" id="eJ4-Jv-Eh3"/>
+                            <constraint firstItem="1Si-Fb-No3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kr3-nq-8jd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="detectedTextView" destination="VNT-U5-FEE" id="xq5-ws-MFZ"/>
+                        <outlet property="sceneView" destination="1Si-Fb-No3" id="qwU-TP-o9w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add-btn" width="50" height="50"/>
+    </resources>
+</document>
